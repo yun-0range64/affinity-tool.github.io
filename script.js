@@ -117,7 +117,7 @@ $('#notes, #groups').on('mousedown', '.note', function(event) {
             Math.pow(mouseX - trashBinLeft, 2) + Math.pow(mouseY - trashBinTop, 2)
         );
 
-        // 콘솔 로그로 거리 확인
+        // 콘솔 로그로 거리 확인 insight
         console.log(`Distance: ${distance}`);
 
         // 휴지통에 근접하면 노트 삭제 (마우스 업 시)
@@ -327,7 +327,7 @@ function addGroupToDisplay(response) {
             const insightContainer = $('<div>').addClass('insight-container visible');
             groupContainer.append(insightContainer);
             insightContainer.append("<p>인사이트</p>");
-            groupContainer.append('<img class="insight-icon" src="./images/icon/insight_inactive.png" alt="#" width="48px">');
+            groupContainer.append('<img class="insight-icon" src="./images/Icon/insight_inactive.png" alt="#" width="48px">');
 
             // 그룹 타이틀 추가 및 수정 가능하게 설정
             const groupTitle = $('<div>').addClass('group-title').text(`${title.trim()}`)
@@ -510,10 +510,10 @@ $('#groups').on('click', '.insight-icon', function() {
     $container.toggleClass('visible');
 
     if ($container.hasClass('visible')) {
-        $icon.attr('src', '/images/Icon/insight_inactive.png');
+        $icon.attr('src', './images/Icon/insight_inactive.png');
         $container.removeClass('inactive');
     } else {
-        $icon.attr('src', '/images/Icon/insight_active.png');
+        $icon.attr('src', './images/Icon/insight_active.png');
         $container.addClass('inactive');
     }
 });
