@@ -16,7 +16,7 @@ body {
     height: 100vh;
     /* user-select: none; */
     position: relative;
-overflow: hidden;
+
 }
 body button{
     cursor: pointer;
